@@ -10,3 +10,11 @@ export const addCase = newCase => {
     }
 
 }
+
+export const fetchCases = category_id => {
+    return (dispatch) => {
+        fetch(`http://127.0.0.1:3000/categories/${category_id}/cases`)
+        .then(resp => resp.json())
+        .then(cases => dispatch({type: 'FETCH_CASES', payload: cases}))
+    }
+}
