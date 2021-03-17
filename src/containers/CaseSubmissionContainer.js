@@ -45,16 +45,16 @@ class CaseSubmissionContainer extends React.Component {
 
                     <label>Category:</label>
                     <ul>
-                    <ol><input type="radio" value="Assassinations" checked={this.state.category_id === "Assassinations"} onChange={this.handleChange} name="category" /> Assassinations</ol>
-                    <ol><input type="radio" value="Cold Cases" checked={this.state.category_id === "Cold Cases"} onChange={this.handleChange} name="category" /> Cold Cases</ol>
-                    <ol><input type="radio" value="Drugs" checked={this.state.category_id === "Drugs"} onChange={this.handleChange} name="category" /> Drugs</ol>
-                    <ol><input type="radio" value="Homicide" checked={this.state.category_id === "Homicide"} onChange={this.handleChange} name="category" /> Homicide</ol>
-                    <ol><input type="radio" value="Organized Crime" checked={this.state.category_id === "Organized Crime"} onChange={this.handleChange} name="category" /> Organized Crime</ol>
-                    <ol><input type="radio" value="Robberies" checked={this.state.category_id === "Robberies"} onChange={this.handleChange} name="category" /> Robberies</ol>
-                    <ol><input type="radio" value="Serial Killers" checked={this.state.category_id === "Serial Killers"} onChange={this.handleChange} name="category" /> Serial Killers</ol>
-                    <ol><input type="radio" value="White Collar" checked={this.state.category_id === "White Collar"} onChange={this.handleChange} name="category" /> White Collar</ol>
-                    <ol><input type="radio" value="Wrongfully Accused" checked={this.state.category_id === "Wrongfully Accused"} onChange={this.handleChange} name="category" /> Wrongfully Accused</ol>
-                    <ol><input type="radio" value="Unsolved" checked={this.state.category_id === "Unsolved"} onChange={this.handleChange} name="category" /> Unsolved</ol>
+                    <ol><input type="radio" value="1" checked={this.state.category_id === "1"} onChange={this.handleChange} name="category_id" /> Assassinations</ol>
+                    <ol><input type="radio" value="2" checked={this.state.category_id === "2"} onChange={this.handleChange} name="category_id" /> Cold Cases</ol>
+                    <ol><input type="radio" value="3" checked={this.state.category_id === "3"} onChange={this.handleChange} name="category_id" /> Drugs</ol>
+                    <ol><input type="radio" value="4" checked={this.state.category_id === "4"} onChange={this.handleChange} name="category_id" /> Homicide</ol>
+                    <ol><input type="radio" value="5" checked={this.state.category_id === "5"} onChange={this.handleChange} name="category_id" /> Organized Crime</ol>
+                    <ol><input type="radio" value="6" checked={this.state.category_id === "6"} onChange={this.handleChange} name="category_id" /> Robberies</ol>
+                    <ol><input type="radio" value="7" checked={this.state.category_id === "7"} onChange={this.handleChange} name="category_id" /> Serial Killers</ol>
+                    <ol><input type="radio" value="8" checked={this.state.category_id === "8"} onChange={this.handleChange} name="category_id" /> White Collar</ol>
+                    <ol><input type="radio" value="9" checked={this.state.category_id === "9"} onChange={this.handleChange} name="category_id" /> Wrongfully Accused</ol>
+                    <ol><input type="radio" value="10" checked={this.state.category_id === "10"} onChange={this.handleChange} name="category_id" /> Unsolved</ol>
                     <br/>
 
                     <input type="submit" value="Submit Case" />
