@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux'
+import { addCase } from '../actions/casesActions'
 
 class CaseSubmissionContainer extends React.Component {
     state = {
@@ -23,7 +25,7 @@ class CaseSubmissionContainer extends React.Component {
     }
 
     render() {
-        {console.log(this.state)}
+        console.log(this.state)
         return (
             <div>
                 Case Submission Form:
@@ -66,4 +68,12 @@ class CaseSubmissionContainer extends React.Component {
 
 
 
-export default CaseSubmissionContainer;
+export default connect(null, { addCase })(CaseSubmissionContainer);
+
+// const radios = document.getElementsByName('difficulty');
+//    for (var i = 0, length = radios.length; i < length; i++) {
+//     if (radios[i].checked) {
+
+//         difficulty = radios[i].value
+//     }
+// }
