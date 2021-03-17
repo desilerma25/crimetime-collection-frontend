@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 const handleCatClick = () => {
     console.log("we've been clicked!")
 }
-// destructure 
+// need to use a link with button, instead of handle click
+ 
 const Categories = ({ categories }) => {
     return (
         <div>
