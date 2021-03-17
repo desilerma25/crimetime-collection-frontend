@@ -8,6 +8,7 @@ import {  createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { rootReducer } from "./reducers/rootReducer";
+import { BrowserRouter as Router } from 'react-router-dom';
 
 // createStore accepts 2 args
 // reducer and dev tools
@@ -16,7 +17,9 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={ store }>
-      <App />
+      <Router >
+        <App />
+      </Router>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
