@@ -2,17 +2,19 @@
 import React from "react";
 import { fetchCategories } from '../actions/categoriesActions'
 import { connect } from 'react-redux' 
+import Categories from '../components/Categories'
 
 class CategoriesContainer extends React.Component {
 
     componentDidMount() {
-        // console.log(this.props.fetchCategories)
+        console.log(this.props.fetchCategories)
         this.props.fetchCategories();
     }
     render() {
         return (
             <div>
                 You are in the categories container!
+                <Categories />
             </div>
         )
     }
