@@ -1,15 +1,41 @@
+import React from 'react'
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom'
 import CaseSubmissionContainer from './containers/CaseSubmissionContainer';
 import CategoriesContainer from './containers/CategoriesContainer';
 
-function App() {
-  return (
-    <div className="App">
-      Hello, I am in the body
-      < CategoriesContainer />
-      < CaseSubmissionContainer />
-    </div>
-  );
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <div>
+          <ul>
+            <ol>
+              <Link to='/'> Home </Link> || 
+              <Link to='/cases/new'> Case Submission </Link>
+            </ol>
+          </ul>
+        </div>
+          <Switch>
+            <Route exact path='/'>< Home /></Route>
+            <Route exact path='/cases/new' component={ CaseSubmissionContainer } />
+          </Switch>
+      </Router>
+    );
+  }
 }
 
-export default App;
+function Home() {
+  return (
+    <div>
+      <h2>Homepage</h2>
+      < CategoriesContainer />
+    </div>
+  )
+}
