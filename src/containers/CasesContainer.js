@@ -3,6 +3,8 @@ import React from 'react';
 import Cases from '../components/Cases';
 import { connect } from 'react-redux';
 import { fetchCases } from '../actions/casesActions'
+import { Switch, Route } from 'react-router-dom';
+import SpecificCase from '../components/Case';
 
 class CasesContainer extends React.Component {
 
@@ -11,17 +13,33 @@ class CasesContainer extends React.Component {
         this.props.fetchCases(this.props.category.id);
     }
 
-    render() 
-    {
+    render() {
+        console.log(this.props.cases)
         // debugger
         return(
             <div>
                 This is the cases container!
-                <Cases category_id={this.props.category.id}/>
+                <Switch>
+                    <Route exact path='/categories/:id/cases' component={(routeInfo) => {
+                        return <Cases routeInfo={routeInfo} category={this.props.category} cases={this.props.cases}/>
+                    } } />
+
+                    <Route exact path='/categories/:category_id/cases/:id' component={(routeInfo) => {
+                        const id = parseInt(routeInfo.match.params.id)
+                        const specCase = this.props.cases.find(c => c.id === id)
+                        console.log(routeInfo)
+                        return !!specCase ? <SpecificCase routeInfo={routeInfo} specCase={specCase}/> :
+                        <div>Loading...</div>
+                    } } />
+                </Switch>
             </div>
         )
     }
 }
 
-export default connect(null, { fetchCases })(CasesContainer);
+const mapStateToProps = state => {
+    return {cases: state.cases}
+}
+
+export default connect(mapStateToProps, { fetchCases })(CasesContainer);
 

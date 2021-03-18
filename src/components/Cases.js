@@ -1,17 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
-const Cases = ({ cases }) => {
+const Cases = ({ cases, category }) => {
 
     return (
         <div>
-        Here are your specific cases!
+        Here are your {category.name} cases!
         
         
         {cases.map(indivCase => <ul key={indivCase.id}>
             <ol>
-                <button>{indivCase.name}</button>
+                <Link to={`/categories/${indivCase.category_id}/cases/${indivCase.id}`}>
+                    <button>{indivCase.name}</button>
+                </Link>
             </ol>
         </ul>)}
         </div>

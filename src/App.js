@@ -16,14 +16,14 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Router>
-          <Switch>
-              <Route exact path='/' component={ CategoriesContainer }>< Home /></Route>
-              <Route exact path='/cases/new' component={ CaseSubmissionContainer } />
-              <Route path='/categories' component={ CategoriesContainer }/>
-            </Switch>
-        </Router>
-      <NavBar/>
+        <NavBar/>
+
+        <Switch>
+            <Route exact path='/'>< Home /></Route>
+            <Route exact path='/cases/new' component={ CaseSubmissionContainer } />
+            <Route path='/categories' component={ CategoriesContainer }/>
+        </Switch>
+
       </div>
 
     );

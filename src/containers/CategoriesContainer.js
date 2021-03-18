@@ -17,14 +17,14 @@ class CategoriesContainer extends React.Component {
             <div>
                 You are in the categories container!
                 <Switch>
-                    <Route exact path='/categories/:id/cases' component={(routeInfo) => {
+                    <Route path='/categories/:id/cases' component={(routeInfo) => {
                         const id = parseInt(routeInfo.match.params.id)
                         const category = this.props.categories.find(c => c.id === id)
                         console.log(routeInfo)
                         return !!category ? <CasesContainer routeInfo={routeInfo} category={category}/> :
                         <div>Loading...</div>
                     } } />
-                    <Route exact path='/categories' component={ Categories } />
+                    <Route exact path='/' component={ Categories } />
                 </Switch>
 
             </div>
