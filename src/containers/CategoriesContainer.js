@@ -2,7 +2,9 @@
 import React from "react";
 import { fetchCategories } from '../actions/categoriesActions'
 import { connect } from 'react-redux' 
-import Categories from '../components/Categories'
+import Categories from '../components/Categories';
+import CasesContainer from '../containers/CasesContainer';
+import { Link, Route } from 'react-router-dom';
 
 class CategoriesContainer extends React.Component {
 
@@ -14,6 +16,8 @@ class CategoriesContainer extends React.Component {
         return (
             <div>
                 You are in the categories container!
+
+
                 <Categories />
             </div>
         )

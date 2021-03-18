@@ -3,6 +3,12 @@ import React from 'react';
 import Cases from '../components/Cases';
 import { connect } from 'react-redux';
 import { fetchCases } from '../actions/casesActions'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from 'react-router-dom'
 
 class CasesContainer extends React.Component {
 
@@ -11,14 +17,17 @@ class CasesContainer extends React.Component {
         this.props.fetchCases();
     }
 
-    render() {
+    render() 
+    {
+        debugger
         return(
             <div>
                 This is the cases container!
-                <Cases />
+                <Cases category_id={this.props.category_id}/>
             </div>
         )
     }
 }
 
 export default connect(null, { fetchCases })(CasesContainer);
+
