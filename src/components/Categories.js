@@ -1,12 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, Route } from 'react-router-dom';
-import CasesContainer from '../containers/CasesContainer'
-
-// const handleCatClick = () => {
-//     console.log("we've been clicked!")
-// }
-// need to use a link with button, instead of handle click
+import { Link } from 'react-router-dom';
  
 const Categories = ({ categories }) => {
     return (
@@ -34,5 +28,7 @@ const mapStateToProps = state => {
 
 // want to grab state from store to make a list
 export default connect(mapStateToProps)(Categories);
+
+
 
 

@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 
 const Cases = ({ cases }) => {
-    // debugger
+
     return (
         <div>
         Here are your specific cases!

@@ -4,7 +4,7 @@ import { fetchCategories } from '../actions/categoriesActions'
 import { connect } from 'react-redux' 
 import Categories from '../components/Categories';
 import CasesContainer from '../containers/CasesContainer';
-import { Link, Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 class CategoriesContainer extends React.Component {
 
@@ -16,13 +16,26 @@ class CategoriesContainer extends React.Component {
         return (
             <div>
                 You are in the categories container!
+                <Switch>
+                    <Route exact path='/categories/:id/cases' component={(routeInfo) => {
+                        const id = parseInt(routeInfo.match.params.id)
+                        const category = this.props.categories.find(c => c.id === id)
+                        console.log(routeInfo)
+                        return !!category ? <CasesContainer routeInfo={routeInfo} category={category}/> :
+                        <div>Loading...</div>
+                    } } />
+                    <Route exact path='/categories' component={ Categories } />
+                </Switch>
 
-
-                <Categories />
             </div>
         )
     }
+
+}
+
+const mapStateToProps = state => {
+    return {categories: state.categories}
 }
 
 // makes fetchCat available to our container bc of mapDispatchToProps(gives access to actions)
-export default connect(null, { fetchCategories })(CategoriesContainer);
+export default connect(mapStateToProps, { fetchCategories })(CategoriesContainer);
