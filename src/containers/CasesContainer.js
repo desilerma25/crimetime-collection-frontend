@@ -1,5 +1,8 @@
 // will be container, data and methods regarding cases
 import React from 'react';
+import Cases from '../components/Cases';
+import { connect } from 'react-redux';
+import { fetchCases } from '../actions/casesActions'
 
 class CasesContainer extends React.Component {
 
