@@ -14,7 +14,7 @@ class CategoriesContainer extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className='cat_cont'>
                 You are in the categories container!
                 <Switch>
                     <Route path='/categories/:id/cases' component={(routeInfo) => {

@@ -17,7 +17,7 @@ class CasesContainer extends React.Component {
         console.log(this.props.cases)
         // debugger
         return(
-            <div>
+            <div className='case_cont'>
                 This is the cases container!
                 <Switch>
                     <Route exact path='/categories/:id/cases' component={(routeInfo) => {

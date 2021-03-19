@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
  
 const Categories = ({ categories }) => {
     return (
-        <div>
+        <div className='cases'>
             Show me some categories!!
 
 

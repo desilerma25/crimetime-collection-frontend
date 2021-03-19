@@ -27,7 +27,7 @@ class CaseSubmissionContainer extends React.Component {
     render() {
         console.log(this.state)
         return (
-            <div>
+            <div className='case_form'>
                 Case Submission Form:
                 
                 <form onSubmit={this.handleSubmit}>

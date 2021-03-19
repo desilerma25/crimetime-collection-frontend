@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Cases = ({ cases, category }) => {
 
     return (
-        <div>
+        <div className='cat_cases'>
         Here are your {category.name} cases!
         
         
