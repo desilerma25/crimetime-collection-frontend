@@ -9,11 +9,11 @@ const Categories = ({ categories }) => {
 
 
             {categories.map(category => <ul key={category.id}>
-                <ol>
+                <p>
                     <Link to={`/categories/${category.id}/cases`}>
                         <button>{category.name}</button>
                     </Link>
-                </ol>
+                </p>
             </ul>)}
         </div>
     );

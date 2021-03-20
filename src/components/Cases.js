@@ -11,11 +11,11 @@ const Cases = ({ cases, category }) => {
         
         
         {cases.map(indivCase => <ul key={indivCase.id}>
-            <ol>
+            <p>
                 <Link to={`/categories/${indivCase.category_id}/cases/${indivCase.id}`}>
                     <button>{indivCase.name}</button>
                 </Link>
-            </ol>
+            </p>
         </ul>)}
         </div>
     )
