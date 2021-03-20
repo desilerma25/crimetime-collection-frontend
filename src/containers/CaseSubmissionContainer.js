@@ -20,19 +20,26 @@ class CaseSubmissionContainer extends React.Component {
     handleSubmit = e => {
         //will call action that will dispatch new obj to reducer to update store state
         // action will make post fetch to persist to db
+        // clears form upon submit
         e.preventDefault();
         this.props.addCase(this.state)
+        this.setState({
+            name: '',
+            description: '',
+            image_url: '',
+            category_id: ''
+        })
     }
 
     render() {
         console.log(this.state)
         return (
-            <div className='case_form'>
+            <div className='caseForm'>
                 Case Submission Form:
                 
                 <form onSubmit={this.handleSubmit}>
-                    <label>Name:</label>
-                    <input type="text" value={this.state.name} onChange={this.handleChange} name="name" />
+                    <label className='form-inline' >Name:</label>
+                    <input className='form-inline form-control' type="text" value={this.state.name} onChange={this.handleChange} name="name" />
                     <br/>
                     
                     <label>Description:</label>

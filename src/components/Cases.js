@@ -22,6 +22,7 @@ const Cases = ({ cases, category }) => {
 }
 
 
+
 const mapStateToProps = state => {
     return { cases: state.cases}
 }
