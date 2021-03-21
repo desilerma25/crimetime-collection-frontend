@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -40,5 +41,43 @@
 .caseForm {
   margin: auto;
   width: 50%;
-  padding-top: 10%;
+  padding: 2%;
 }
+
+img {
+  height: 400px;
+  display: block;
+  border-radius: 7px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  font-size: medium;
+}
+
+.spec_case {
+  padding: 3%;
+}
+
+.cat_cases {
+  padding: 3%;
+}
+
+.home-pg {
+  margin: 2%;
+  border-style: solid;
+  border-color: black;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: lightsteelblue;
+  border-radius: 2%;
+}
+
+#height-text {
+  height: 300px;
+}
+

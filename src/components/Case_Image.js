@@ -4,7 +4,7 @@ const CaseImage = ({name, image}) => {
     return(
 
         <div className='case_img'>
-            <img alt={name + 'image'} src={image} />
+            <img alt={name + ' image'} src={image} />
         </div>
         
     )

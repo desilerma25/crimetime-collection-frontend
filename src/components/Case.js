@@ -7,9 +7,9 @@ const SpecificCase = ({specCase}) => {
     return (
 
         <div className='spec_case'>
-            <h1>{specCase.name}</h1>
-            <CaseImage name={specCase.name} image={specCase.image_url}/>
-            <h4>{specCase.description}</h4>
+            <h1>{specCase.name}</h1> <br />
+            <CaseImage name={specCase.name} image={specCase.image_url}/> <br />
+            <h5>{specCase.description}</h5>
         </div>
         
     )
