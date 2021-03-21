@@ -7,6 +7,7 @@ import {
 import CaseSubmissionContainer from './containers/CaseSubmissionContainer';
 import CategoriesContainer from './containers/CategoriesContainer';
 import NavBar from './components/NavBar'
+import Home from './components/Home'
 
 // import CasesContainer from './containers/CasesContainer'
 
@@ -18,7 +19,7 @@ export default class App extends React.Component {
         <NavBar/>
 
         <Switch>
-            <Route exact path='/'>< Home /></Route>
+            <Route exact path='/' component={ Home } />
             <Route exact path='/cases/new' component={ CaseSubmissionContainer } />
             <Route path='/categories' component={ CategoriesContainer }/>
         </Switch>
@@ -29,11 +30,7 @@ export default class App extends React.Component {
   }
 }
 
-function Home() {
-  return (
-    <div>
-      <h2>Homepage</h2>
-      < CategoriesContainer />
-    </div>
-  )
-}
+
+
+//<Route exact path='/'>< Home /></Route>
+// had home function here

@@ -15,10 +15,9 @@ class CasesContainer extends React.Component {
 
     render() {
         console.log(this.props.cases)
-        // debugger
         return(
+
             <div className='case_cont'>
-                This is the cases container!
                 <Switch>
                     <Route exact path='/categories/:id/cases' component={(routeInfo) => {
                         return <Cases routeInfo={routeInfo} category={this.props.category} cases={this.props.cases}/>
@@ -33,6 +32,7 @@ class CasesContainer extends React.Component {
                     } } />
                 </Switch>
             </div>
+            
         )
     }
 }

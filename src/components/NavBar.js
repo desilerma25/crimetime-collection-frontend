@@ -11,29 +11,26 @@ import { connect } from 'react-redux'
 
 
 class NavBar extends React.Component {
-render() {
-  return (
-    <Navbar bg="light" expand="lg">
-    <Navbar.Brand href="/">CrimeTime Collection</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/cases/new">Case Submission</Nav.Link>
-        <NavDropdown title="Categories" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/categories"> All Categories</NavDropdown.Item>
-            <NavDropdown.Divider />
-            <CatDropdown categories={this.props.categories}/>
-        </NavDropdown>
-        </Nav>
-        <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-success">Search</Button>
-        </Form>
-    </Navbar.Collapse>
-    </Navbar>)
-}
+  render() {
+    return (
 
+      <Navbar bg="light" expand="lg">
+      <Navbar.Brand href="/">CrimeTime Collection</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+          <Nav.Link href="/cases/new">Case Submission</Nav.Link>
+          <NavDropdown title="Categories" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/categories"> All Categories</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <CatDropdown categories={this.props.categories}/>
+          </NavDropdown>
+          </Nav>
+      </Navbar.Collapse>
+      </Navbar>
+      
+    )
+  }
 }
 
 const mapStateToProps = state => {

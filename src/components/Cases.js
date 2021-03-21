@@ -6,9 +6,9 @@ import { Link } from 'react-router-dom';
 const Cases = ({ cases, category }) => {
 
     return (
+
         <div className='cat_cases'>
-        Here are your {category.name} cases!
-        
+        Below are all {category.name} cases. Select a case to read more about it.
         
         {cases.map(indivCase => <ul key={indivCase.id}>
             <p>
@@ -18,6 +18,7 @@ const Cases = ({ cases, category }) => {
             </p>
         </ul>)}
         </div>
+        
     )
 }
 

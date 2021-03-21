@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
  
 const Categories = ({ categories }) => {
     return (
+
         <div className='cases'>
-            Show me some categories!!
-
-
+            Select a category below to view the cases associated with it.
             {categories.map(category => <ul key={category.id}>
                 <p>
                     <Link to={`/categories/${category.id}/cases`}>
@@ -16,6 +15,7 @@ const Categories = ({ categories }) => {
                 </p>
             </ul>)}
         </div>
+        
     );
 };
 

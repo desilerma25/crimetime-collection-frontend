@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { addCase } from '../actions/casesActions'
+import { fetchCategories } from '../actions/categoriesActions'
 
 class CaseSubmissionContainer extends React.Component {
     state = {
@@ -31,6 +32,11 @@ class CaseSubmissionContainer extends React.Component {
         })
     }
 
+    componentDidMount() {
+        console.log(this.props.fetchCategories)
+        this.props.fetchCategories();
+    }
+
     render() {
         console.log(this.state)
         return (
@@ -56,12 +62,12 @@ class CaseSubmissionContainer extends React.Component {
                     <ol><input type="radio" value="2" checked={this.state.category_id === "2"} onChange={this.handleChange} name="category_id" /> Cold Cases</ol>
                     <ol><input type="radio" value="3" checked={this.state.category_id === "3"} onChange={this.handleChange} name="category_id" /> Drugs</ol>
                     <ol><input type="radio" value="4" checked={this.state.category_id === "4"} onChange={this.handleChange} name="category_id" /> Homicide</ol>
-                    <ol><input type="radio" value="5" checked={this.state.category_id === "5"} onChange={this.handleChange} name="category_id" /> Organized Crime</ol>
-                    <ol><input type="radio" value="6" checked={this.state.category_id === "6"} onChange={this.handleChange} name="category_id" /> Robberies</ol>
-                    <ol><input type="radio" value="7" checked={this.state.category_id === "7"} onChange={this.handleChange} name="category_id" /> Serial Killers</ol>
-                    <ol><input type="radio" value="8" checked={this.state.category_id === "8"} onChange={this.handleChange} name="category_id" /> White Collar</ol>
-                    <ol><input type="radio" value="9" checked={this.state.category_id === "9"} onChange={this.handleChange} name="category_id" /> Wrongfully Accused</ol>
-                    <ol><input type="radio" value="10" checked={this.state.category_id === "10"} onChange={this.handleChange} name="category_id" /> Unsolved</ol>
+                    <ol><input type="radio" value="5" checked={this.state.category_id === "5"} onChange={this.handleChange} name="category_id" /> Mass Murder</ol>
+                    <ol><input type="radio" value="6" checked={this.state.category_id === "6"} onChange={this.handleChange} name="category_id" /> Organized Crime</ol>
+                    <ol><input type="radio" value="7" checked={this.state.category_id === "7"} onChange={this.handleChange} name="category_id" /> Robberies</ol>
+                    <ol><input type="radio" value="8" checked={this.state.category_id === "8"} onChange={this.handleChange} name="category_id" /> Serial Killers</ol>
+                    <ol><input type="radio" value="9" checked={this.state.category_id === "9"} onChange={this.handleChange} name="category_id" /> White Collar</ol>
+                    <ol><input type="radio" value="10" checked={this.state.category_id === "10"} onChange={this.handleChange} name="category_id" /> Wrongfully Accused</ol>
                     <br/>
 
                     <input type="submit" value="Submit Case" />
@@ -73,14 +79,10 @@ class CaseSubmissionContainer extends React.Component {
     }
 }
 
-
-
-export default connect(null, { addCase })(CaseSubmissionContainer);
-
-// const radios = document.getElementsByName('difficulty');
-//    for (var i = 0, length = radios.length; i < length; i++) {
-//     if (radios[i].checked) {
-
-//         difficulty = radios[i].value
-//     }
+// const mapStateToProps = (categories) => {
+//     // const cat = categories.find(category => category.id === parseInt(ownProps.match.params.id))
+//     console.log("cat", categories)
+//     return {categories}
 // }
+
+export default connect(null, { addCase, fetchCategories })(CaseSubmissionContainer);
