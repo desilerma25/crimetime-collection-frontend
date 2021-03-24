@@ -1,3 +1,33 @@
+# CrimeTime Collection
+Interest in true crime cases has increased over the years. Some look into cases to learn how the could/should react if they were in the same situation, some have a morbid interest and some want to know more about the human psyche. Whatever your reason maybe use CrimeTime Collection to learn more about a specific case. If you'd like to add a case to our database, simply add in the details and submit through our case submission form. 
+
+## CrimeTimeCollection JavaScript React/Redux frontend
+
+# Link to backend repo
+https://github.com/desilerma25/crimetime-collection-backend.git
+
+## Video Demo
+https://youtu.be/kmHod-D9pug
+
+**To get this application started:**
+A few installations are required first. Run the following.
+$npm install react-redux
+$npm install redux
+$npm install --save redux-thunk
+$npm install react-router-dom
+
+To then start our frontend server run
+$npm start or $yarn start
+
+**Please note that, for the associated fetch requests to work on the frontend, the backend repo's server MUST be running.**
+
+**License:**
+Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+Details available here: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+**Contributors**
+If you would like to add to or collaborate on this program please email me at desi.lerma96@yahoo.com.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
