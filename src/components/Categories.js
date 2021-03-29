@@ -25,11 +25,10 @@ const Categories = ({ categories }) => {
 
 
 const mapStateToProps = state => {
-    // returns obj with property
     return { categories: state.categories }
 }
 
-// want to grab state from store to make a list
+
 export default connect(mapStateToProps)(Categories);
 
 

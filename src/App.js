@@ -9,8 +9,6 @@ import CategoriesContainer from './containers/CategoriesContainer';
 import NavBar from './components/NavBar'
 import Home from './components/Home'
 
-// import CasesContainer from './containers/CasesContainer'
-
 
 export default class App extends React.Component {
   render() {
@@ -29,8 +27,3 @@ export default class App extends React.Component {
     );
   }
 }
-
-
-
-//<Route exact path='/'>< Home /></Route>
-// had home function here

@@ -38,5 +38,5 @@ const mapStateToProps = state => {
     return {categories: state.categories}
 }
 
-// makes fetchCat available to our container bc of mapDispatchToProps(gives access to actions)
+
 export default connect(mapStateToProps, { fetchCategories })(CategoriesContainer);

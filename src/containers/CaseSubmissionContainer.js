@@ -19,9 +19,6 @@ class CaseSubmissionContainer extends React.Component {
     }
 
     handleSubmit = e => {
-        //will call action that will dispatch new obj to reducer to update store state
-        // action will make post fetch to persist to db
-        // clears form upon submit
         e.preventDefault();
         this.props.addCase(this.state)
         this.setState({
@@ -78,11 +75,5 @@ class CaseSubmissionContainer extends React.Component {
         )
     }
 }
-
-// const mapStateToProps = (categories) => {
-//     // const cat = categories.find(category => category.id === parseInt(ownProps.match.params.id))
-//     console.log("cat", categories)
-//     return {categories}
-// }
 
 export default connect(null, { addCase, fetchCategories })(CaseSubmissionContainer);
