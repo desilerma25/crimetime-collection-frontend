@@ -38,6 +38,10 @@
   }
 }
 
+.searchBar {
+  text-align: center;
+}
+
 .caseForm {
   margin: auto;
   width: 50%;
@@ -57,11 +61,15 @@ label {
 }
 
 .spec_case {
-  padding: 3%;
+  text-align: center;
+  align-content: center;
+  align-items: center;
 }
 
 .cat_cases {
-  padding: 3%;
+  text-align: center;
+  align-content: center;
+  align-items: center;
 }
 
 .home-pg {
@@ -80,4 +88,3 @@ label {
 #height-text {
   height: 300px;
 }
-

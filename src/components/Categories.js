@@ -9,13 +9,13 @@ const Categories = ({ categories }) => {
             <h4>Select a category below to view the cases associated with it.</h4>
             <br/>
             <br/> 
-            {categories.map(category => <ul key={category.id}>
+            {categories.map(category => <div key={category.id}>
                 <p>
                     <Link to={`/categories/${category.id}/cases`}>
                         <button>{category.name}</button>
                     </Link>
                 </p>
-            </ul>)}
+            </div>)}
         </div>
         
     );
