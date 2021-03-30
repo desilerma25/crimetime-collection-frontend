@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { addCase } from '../actions/casesActions'
 import { fetchCategories } from '../actions/categoriesActions'
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
 
 class CaseSubmissionContainer extends React.Component {
     state = {
@@ -67,7 +69,9 @@ class CaseSubmissionContainer extends React.Component {
                     <p><input type="radio" value="10" checked={this.state.category_id === "10"} onChange={this.handleChange} name="category_id" /> Wrongfully Accused</p>
                     <br/>
 
-                    <input type="submit" value="Submit Case" />
+                    <Popup trigger={<input type="submit" value="Submit Case" />} position="right center">
+                        <div>Your case was submitted!</div>
+                    </Popup>
                     </ul>
 
                 </form>
