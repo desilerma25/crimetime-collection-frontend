@@ -30,8 +30,8 @@ class NavBar extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {categories: state.categories}
+const mapStateToProps = stateFromStore => {
+  return {categories: stateFromStore.categories}
 }
 
 export default connect(mapStateToProps)(NavBar);

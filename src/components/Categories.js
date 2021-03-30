@@ -24,8 +24,8 @@ const Categories = ({ categories }) => {
 
 
 
-const mapStateToProps = state => {
-    return { categories: state.categories }
+const mapStateToProps = stateFromStore => {
+    return { categories: stateFromStore.categories }
 }
 
 

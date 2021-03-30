@@ -42,8 +42,8 @@ const Cases = ({ cases, category }) => {
 
 
 
-const mapStateToProps = state => {
-    return { cases: state.cases}
+const mapStateToProps = stateFromStore => {
+    return { cases: stateFromStore.cases}
 }
 
 export default connect(mapStateToProps)(Cases);
