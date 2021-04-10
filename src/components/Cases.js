@@ -2,10 +2,23 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useState } from 'react'
-
+// DONT FORGET TO COMPLETE YOUR LIVE CODE CHALLENGE OR REMOVE IT
 
 const Cases = ({ cases, category }) => {
     const [searchTerm, setSearchTerm] = useState("")
+
+    // const [value, increaseValue] = useState("")
+
+    // const upvoteVal = (val) => {
+    //     console.log("here")
+    //     increaseVote(val)
+    // };
+
+    // const increaseVote = val => {
+    //     // setState = {count: val}
+    // }
+
+    // console.log(useState(""))
 
     return (
         <div className='cat_cases'>
@@ -16,7 +29,11 @@ const Cases = ({ cases, category }) => {
          placeholder= "Search By Case Name"
          // eslint-disable-next-line
          onChange={event => {setSearchTerm(event.target.value)} }/>
+
+        
+
         { // eslint-disable-next-line
+
         cases.filter((val)=> {
             if (searchTerm === ""){
             return val
@@ -29,6 +46,7 @@ const Cases = ({ cases, category }) => {
                 <Link to={`/categories/${indivCase.category_id}/cases/${indivCase.id}`}>
                     <button>{indivCase.name}</button>
                 </Link>
+                
             </p>
         </div>)}
     
@@ -48,3 +66,5 @@ const mapStateToProps = stateFromStore => {
 
 export default connect(mapStateToProps)(Cases);
 
+// {/* <input type="number" className="upvote" onChange={event => increaseValue(event.target.value)} value={value}/> */}
+// <button onClick={increaseVote}> Upvote </button>

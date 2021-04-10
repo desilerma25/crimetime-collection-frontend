@@ -9,8 +9,10 @@ import { Route, Switch } from 'react-router-dom';
 class CategoriesContainer extends React.Component {
 
     componentDidMount() {
-        console.log(this.props.fetchCategories)
+        // console.log(this.props.fetchCategories)
+        // console.log("a")
         this.props.fetchCategories();
+        // console.log("b")
     }
     render() {
         return (
