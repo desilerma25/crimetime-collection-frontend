@@ -8,9 +8,10 @@ import CaseSubmissionContainer from './containers/CaseSubmissionContainer';
 import CategoriesContainer from './containers/CategoriesContainer';
 import NavBar from './components/NavBar'
 import Home from './components/Home'
+import { fetchCategories } from './actions/categoriesActions'
+import { connect } from 'react-redux'
 
-
-export default class App extends React.Component {
+class App extends React.Component {
   componentDidMount() {
     this.props.fetchCategories();
   }
@@ -30,3 +31,5 @@ export default class App extends React.Component {
     );
   }
 }
+
+export default connect(null, { fetchCategories })(App);
