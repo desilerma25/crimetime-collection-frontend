@@ -11,6 +11,9 @@ import Home from './components/Home'
 
 
 export default class App extends React.Component {
+  componentDidMount() {
+    this.props.fetchCategories();
+  }
   render() {
     return (
       <div className='app'>
