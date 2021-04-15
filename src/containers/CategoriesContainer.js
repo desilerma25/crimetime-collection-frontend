@@ -17,6 +17,7 @@ class CategoriesContainer extends React.Component {
     render() {
         return (
             <div className='cat_cont'>
+                <h3>Please allow a moment for the categories to display as Heroku enjoys taking naps if the site is not active. If it takes a tad too long please open this site on another tab or refresh the page.</h3>
                 <Switch>
                     <Route path='/categories/:id/cases' component={(routeInfo) => {
                         const id = parseInt(routeInfo.match.params.id)
