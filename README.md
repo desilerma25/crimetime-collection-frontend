@@ -9,6 +9,9 @@ https://github.com/desilerma25/crimetime-collection-backend.git
 ## Video Demo
 https://youtu.be/kmHod-D9pug
 
+## Site URL
+https://crimetime-collection.netlify.app/
+
 **To get this application started:**
 A few installations are required first. Run the following.
 $npm install react-redux
